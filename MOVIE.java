@@ -193,11 +193,11 @@ public class MOVIE{
             {
                 for(j=1;j<=3;j++){
                     if(j==a && j==1)
-                    hvsa[p]+=svpn;
+                        hvsa[p]+=svpn;
                     if(j==a && j==2)
-                    bvsa[p]+=svpn;
+                        bvsa[p]+=svpn;
                     if(j==a && j==3)
-                    evsa[p]+=svpn;
+                        evsa[p]+=svpn;
                 }    
             }
             else if(h==2)
@@ -205,9 +205,9 @@ public class MOVIE{
                 for(j=1;j<=3;j++){
                     if(j==a && j==1)
                     hsa[p]+=sn;
-                    if(j==a && j==2)
+                        if(j==a && j==2)
                     bsa[p]+=sn;
-                    if(j==a && j==3)
+                        if(j==a && j==3)
                     esa[p]+=sn;
                 }
             }
@@ -228,7 +228,8 @@ public class MOVIE{
         {space(10);System.out.println("PRICE Incl. GST(24%):Rs."+price);}
         space(10);System.out.println("____________________________________________________________________________________________________________________");
         space(10);System.out.println("                                 press any key to continue");
-        x3=sc1.nextLine(); mainMovie();}
+        x3=sc1.nextLine(); mainMovie();
+    }
     public void exit(){//displays exit message
         System.out.println("\f");nl(2);
         space(60);System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
@@ -273,7 +274,9 @@ public class MOVIE{
             if(bcode[i].equalsIgnoreCase(s)){
                 if(a==0){a=2;p=i;}}
             if(ecode[i].equalsIgnoreCase(s)){
-                if(a==0){a=3;p=i;}}}
+                if(a==0){a=3;p=i;}
+            }
+        }
         if(a==1){
             mo=hm[p];dur=hdur[p];sea=hsa[p];svpa=hvsa[p];sp=hpn[p];svp=hpvm[p];tim=htime[p];da=day[p];}
         else if(a==2){
@@ -290,33 +293,43 @@ public class MOVIE{
             if(svpa-seat<0){
                 nl(1);sc1.nextLine();space(30);System.out.println("SORRY only "+svpa+" SEATS AVAILABE");space(30);System.out.println("PLEASE RE-ENTER DETAILS");
                 space(30);System.out.print("press any key to continue");
-                x3=sc1.nextLine();i=0;cod="";c=0; booking();}                  
+                x3=sc1.nextLine();i=0;cod="";c=0; booking();
+            }                  
             else{
                 for(j=1;j<=3;j++){
                     if(j==a && j==1)
-                    hvsa[p]-=svpn;
+                        hvsa[p]-=svpn;
                     if(j==a && j==2)
-                    bvsa[p]-=svpn;
+                        bvsa[p]-=svpn;
                     if(j==a && j==3)
-                    evsa[p]-=svpn;}}}
+                        evsa[p]-=svpn;
+                    }
+                }
+            }
         else if(h==2){
             if(sea-seat<0){
                 nl(1);sc1.nextLine();space(30);System.out.println("SORRY only "+sea+" SEATS AVAILABE");space(30);System.out.println("PLEASE RE-ENTER DETAILS");
                 space(30);System.out.println("press any key to continue");
-                x3=sc1.nextLine();i=0;cod="";c=0; booking();}                  
+                x3=sc1.nextLine();i=0;cod="";c=0; booking();
+            }                  
             else{
                 for(j=1;j<=3;j++){
                     if(j==a && j==1)
-                    hsa[p]-=sn;
+                        hsa[p]-=sn;
                     if(j==a && j==2)
-                    bsa[p]-=sn;
+                        bsa[p]-=sn;
                     if(j==a && j==3)
-                    esa[p]-=sn;}}}
-    }    
+                        esa[p]-=sn;
+                    }
+                }
+            }
+        }    
     public void space(int b){//prints number of spaces side by side
         for(int xyx=1;xyx<=b;xyx++)
-        System.out.print(" ");}
+        System.out.print(" ");
+    }
     public void nl(int b){//prints a number of new line
         for(int xyx=1;xyx<=b;xyx++)
-        System.out.println();}
+        System.out.println();
+    }
 }
